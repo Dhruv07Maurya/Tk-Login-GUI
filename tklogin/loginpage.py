@@ -11,17 +11,22 @@ login.geometry('990x660+200+10')
 bgImage=ImageTk.PhotoImage(file='bglog.png')
 bgLabel=Label(login,image=bgImage).pack()
 login.title('Login Page')
-login.resizable(0,0)
+# login.resizable(0,0)
 
 #buttons and content
 
 heading=Label(login,text='USER LOGIN',font=('Georgia',23,'bold'),bg='white',fg='green').place(x=124,y=120)
-usernameEntry=Entry(login,width=25,font=('Times',13),bd=0,fg='black').place(x=124,y=200)
-# usernameEntry.insert(0,'Username')
-frame1=Frame(login, width=250,height=2,bg='green').place(x=124,y=220)
+usernameEntry=Entry(login,width=25,font=('Times',13),bd=0,fg='black')
+usernameEntry.place(x=124,y=200)
+# usernameEntry.pack()
+usernameEntry.insert(0,'Username')
+# usernameEntry.configure(text="Usr")
+frame1=Frame(login, width=250,height=2,bg='green')
+frame1.place(x=124,y=220)
 
-PasswordEntry=Entry(login,width=25,font=('Times',13),bd=0,fg='black').place(x=124,y=260)
-# PasswordEntry.config(shows='*')
+PasswordEntry=Entry(login,width=25,font=('Times',13),bd=0,fg='black')
+PasswordEntry.place(x=124,y=260)
+PasswordEntry.configure(show='*')
 frame2=Frame(login, width=250,height=2,bg='green').place(x=124,y=282)
 
 #forget pass butt
