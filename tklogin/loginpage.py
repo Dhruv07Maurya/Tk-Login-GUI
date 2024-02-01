@@ -15,7 +15,8 @@ def get_data():
 
 login.geometry('990x660+200+10')
 bgImage=ImageTk.PhotoImage(file='bglog.png')
-bgLabel=Label(login,image=bgImage).pack()
+bgLabel=Label(login,image=bgImage)
+bgLabel.pack()
 login.title('Login Page')
 
 
