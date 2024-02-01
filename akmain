@@ -1,0 +1,36 @@
+from tkinter import *
+import subprocess
+
+def create_window():
+     window.destroy()
+     subprocess.run(["python","Username.py"])
+
+
+window=Tk()
+window.title("Main Page")
+window.config(background="Red")
+
+main_icon=PhotoImage(file='main_icon.png')
+
+label=Label(window,
+            text="ReadMe",
+            font=('Algerian',40,'bold'),
+            fg='white',
+            bg='Red',
+            relief=RAISED,
+            bd=10,
+            padx=20,
+            pady=20,
+            image=main_icon,
+            compound='bottom'
+            )
+label.place(x=200,y=200)
+label.pack()
+
+button=Button(window,
+             text="next",
+             command=create_window
+             )
+button.pack(side=BOTTOM)
+
+window.mainloop()
